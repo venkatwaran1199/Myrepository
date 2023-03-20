@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My Repo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_new_repo">Add new Repo</string>
+    <string name="enter_repository_name">Enter public repository name</string>
+    <string name="enter_user_name">Enter owner name</string>
+    <string name="location">Location</string>
+    <string name="image_of_share_button">image of share button</string>
+    <string name="title">Title</string>
+    <string name="bio">bio</string>
+    <string name="delete_all_repo">Delete All Repo</string>
+    <string name="add_btn_new_repo">Add new Repo</string>
+    <string name="nodatafound">No Repositories Are Found. Click Below to Add One.</string>
+    <string name="imagefornodata">imagefornodata</string>
+</resources>

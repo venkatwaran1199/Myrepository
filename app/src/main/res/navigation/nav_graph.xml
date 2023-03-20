@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listfragment">
+
+    <fragment
+        android:id="@+id/listfragment"
+        android:name="com.example.repositoryassignment.views.list.Listfragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@+id/action_listfragment_to_addFragment"
+            app:destination="@id/addFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.repositoryassignment.views.add.AddFragment"
+        android:label="Add"
+        tools:layout="@layout/fragment_add">
+        <action
+            android:id="@+id/action_addFragment_to_listfragment"
+            app:destination="@id/listfragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popUpTo="@id/listfragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

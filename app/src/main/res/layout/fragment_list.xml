@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="Responseviewmodel"
+            type="com.example.repositoryassignment.viewmodel.Responseviewmodel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.list.Listfragment"
+        android:background="@drawable/my_gradientbg">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_nodata"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/recyclerview"
+            app:layout_constraintVertical_bias="0.29000002"
+            app:srcCompat="@drawable/ic_nodata"
+            android:visibility="invisible"
+            android:emptydatabase="@{Responseviewmodel.emptydatabase}"
+            android:contentDescription="@string/imagefornodata" />
+
+        <TextView
+            android:id="@+id/txt_nodata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/nodatafound"
+            android:textColor="#423C3C"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:visibility="invisible"
+            android:emptydatabase="@{Responseviewmodel.emptydatabase}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_nodata" />
+
+        <Button
+            android:id="@+id/btn_addnewrepo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_btn_new_repo"
+            android:visibility="invisible"
+            android:emptydatabase="@{Responseviewmodel.emptydatabase}"
+            app:layout_constraintEnd_toEndOf="@+id/txt_nodata"
+            app:layout_constraintStart_toStartOf="@+id/txt_nodata"
+            app:layout_constraintTop_toBottomOf="@+id/txt_nodata" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
